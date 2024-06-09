@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: +1;
+  z-index: 1000000;
   position: relative;
   background-color: #f8f9fa;
 }
@@ -84,20 +84,6 @@ header nav li a {
   font-weight: 500;
   text-decoration: none;
   animation: links-trans 1s ease 1 alternate;
-}
-.active-me {
-  position: relative;
-}
-.active-me::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.5rem;
-  border-radius: 50px;
-  width: 50%;
-  transition: all 0.3s ease;
-  height: 3px;
-  background-color: black;
 }
 @keyframes links-trans {
   0% {
@@ -379,7 +365,6 @@ footer {
     right: 0;
     width: 300px;
     height: 320px;
-    z-index: 1000;
     transition: all 0.3s ease;
     overflow: hidden;
     background-color: #201f3e;
