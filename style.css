@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+.parent {
+  max-width: 1560px;
+  margin: 0 auto;
+  height: 100vh;
+}
+/* **************Header Style********************** */
+header {
+  height: 60px;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: +1;
+  position: relative;
+  background-color: #f8f9fa;
+}
+header .image-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .image-div h1 {
+  font-size: 1.15rem;
+  font-weight: normal;
+  height: 90%;
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+  border-radius: 0px 50px 0px 50px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  background-color: #201f3e;
+  animation: img-trans 1s ease 1 alternate;
+}
+@keyframes img-trans {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+header nav li {
+  list-style: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  border-radius: 50px;
+}
+header nav li a {
+  position: relative;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  animation: links-trans 1s ease 1 alternate;
+}
+.active-me {
+  position: relative;
+}
+.active-me::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  border-radius: 50px;
+  width: 50%;
+  transition: all 0.3s ease;
+  height: 3px;
+  background-color: black;
+}
+@keyframes links-trans {
+  0% {
+    opacity: 0;
+    transform: translateY(+50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+header nav li a:before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  border-radius: 50px;
+  width: 0%;
+  transition: all 0.3s ease;
+  height: 3px;
+  background-color: black;
+}
+header nav li a:hover::before {
+  width: 100%;
+}
+header nav .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+header nav .reg-buttons {
+  width: 90px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: #201f3e;
+  height: 40px;
+  animation: btns-trans 1s ease 1 alternate;
+}
+
+@keyframes btns-trans {
+  0% {
+    opacity: 0;
+    transform: translateY(+50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ********************Main Style ********************************/
+/* Hero Styles------------------------------ */
+.hero-div {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background-image: url(/Images/hero.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+}
+.hero-div .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.hero-div h1 {
+  color: #ffffff;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
+  font-size: 4rem;
+  z-index: 10;
+  animation: btns-trans 1s ease 1 alternate;
+}
+.hero-div p {
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
+  letter-spacing: 0.2rem;
+  z-index: 10;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+
+  font-size: 1.5rem;
+}
+/* Record styles----------------------- */
+.record-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 250px;
+}
+.flex-record {
+  position: relative;
+  gap: 0.5rem;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 180px;
+}
+.flex-record::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0.8rem;
+  left: -1.8rem;
+  z-index: 100;
+  background-color: #201f3e;
+}
+.flex-record h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.flex-record p {
+  text-align: left;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+}
+/* Student Style ----------------------------- */
+.students-div {
+  width: 100%;
+  padding: 1rem 0;
+}
+.students-div h2 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.all-students {
+  display: flex;
+  margin: 5rem 0;
+  align-items: center;
+  justify-content: space-around;
+}
+.std-cards {
+  height: 380px;
+  position: relative;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 300px;
+}
+.std-cards:hover {
+  box-shadow: 1px 1px 10px rgb(191, 191, 191);
+}
+.std-pic-and-discription {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.std-pic-and-discription p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+.std-pic-and-discription img {
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+.std-discription {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.std-discription h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.comma {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  background-color: #201f3e;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.copyright {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+.links-social-media {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.links-social-media a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.menu-bar {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #201f3e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.3rem;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: none;
+  animation: menu-anime 1s ease 1 alternate;
+}
+@keyframes menu-anime {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .hero-div h1 {
+    font-size: 3rem;
+  }
+  .hero-div p {
+    font-size: 1.2rem;
+  }
+  .hero-div {
+    height: 600px;
+  }
+  .std-cards {
+    width: 200px;
+    padding: 0.7rem 0.1rem;
+  }
+  .std-pic-and-discription {
+    justify-content: space-evenly;
+    gap: 0;
+  }
+  .std-pic-and-discription img {
+    width: 150px;
+  }
+  .std-pic-and-discription p {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .menu-bar {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    height: 320px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: #201f3e;
+
+    flex-direction: column;
+  }
+  header nav li a {
+    color: white;
+  }
+  header nav .reg-buttons {
+    border: 1px solid white;
+    transition: all 0.3s ease;
+  }
+  header nav .reg-buttons:hover {
+    border: none;
+    background-color: white;
+    color: #201f3e;
+  }
+  header nav li a:before {
+    background-color: #fff;
+  }
+  .full-height {
+    transition: all 0.3s ease;
+    height: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero-div h1 {
+    font-size: 2rem;
+  }
+  .hero-div p {
+    font-size: 0.8rem;
+  }
+  .hero-div {
+    height: 400px;
+  }
+  .record-div {
+    padding: 0 0.5rem;
+  }
+  .flex-record {
+    width: 120px;
+    align-items: center;
+  }
+  .flex-record h2 {
+    font-size: 1.8rem;
+  }
+  .flex-record p {
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .flex-record::after {
+    width: 15px;
+    height: 15px;
+    top: 0.6rem;
+    left: 0rem;
+  }
+  .students-div h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+  }
+  .std-cards {
+    width: 100%;
+    padding: 1rem;
+  }
+  .all-students {
+    padding: 0 2rem;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .std-pic-and-discription {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .std-pic-and-discription p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+  }
+  .std-pic-and-discription img {
+    width: 150px;
+  }
+  footer {
+    padding: 0 2rem;
+  }
+  .links-social-media {
+    display: flex;
+    gap: 1rem;
+  }
+  .links-social-media a,
+  .copyright {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .hero-div h1 {
+    font-size: 1.1rem;
+    margin-bottom: -1rem;
+  }
+  .hero-div p {
+    letter-spacing: 0;
+    font-size: 0.6rem;
+  }
+  .hero-div {
+    height: 250px;
+  }
+  .record-div {
+    height: 500px;
+    flex-direction: column;
+  }
+  .flex-record {
+    width: 200px;
+  }
+  .flex-record h2 {
+    font-size: 2.5rem;
+  }
+  .flex-record p {
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+  }
+  .flex-record::after {
+    width: 20px;
+    height: 20px;
+    top: 0.8rem;
+    left: -2rem;
+  }
+  .students-div h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+  }
+  .std-pic-and-discription img {
+    width: 120px;
+  }
+  footer {
+    height: 30px;
+    padding: 0 1rem;
+  }
+  .links-social-media {
+    display: flex;
+    gap: 1rem;
+  }
+  .links-social-media a,
+  .copyright {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .image-div h1 {
+    font-size: 1rem;
+    height: 70%;
+    padding: 0 2rem;
+  }
+  header {
+    padding: 0 0.7rem;
+  }
+  .menu-bar {
+    right: 0.7rem;
+  }
+}

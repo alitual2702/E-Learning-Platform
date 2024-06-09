@@ -1,0 +1,72 @@
+.full-page-grap {
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-page {
+  margin: 2.5rem auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  background-color: #201f3e;
+  color: #fff;
+  border: 1px solid black;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+.contact-page .content h2 {
+  margin-bottom: 0.3rem;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hr-span {
+  margin-bottom: 2rem;
+}
+.contact-page label {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.contact-page input {
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  height: 35px;
+  width: 100%;
+
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.submit-class {
+  width: 200px;
+  height: 45px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  margin: 1rem auto;
+  transition: all 0.3s ease;
+}
+.submit-class:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+@media screen and (max-width: 550px) {
+  .full-page-grap {
+    padding: 0 1rem;
+  }
+  .contact-page {
+    width: 100%;
+  }
+  .submit-class {
+    width: 100px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}

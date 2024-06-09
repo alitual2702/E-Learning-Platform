@@ -1,0 +1,82 @@
+
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 2rem auto;
+  width: 90%;
+}
+.container h1 {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 3rem;
+}
+.container p:nth-child(2) {
+  font-size: 1.6rem;
+  font-family: "Roboto Slab", serif;
+}
+.container p:nth-child(2)::first-letter,
+.container p:nth-child(3)::first-letter,
+.container p:nth-child(4)::first-letter,
+.container p:nth-child(5)::first-letter,
+.container p:nth-child(6)::first-letter {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.container p:nth-child(3),
+.container p:nth-child(4),
+.container p:nth-child(5),
+.container p:nth-child(6) {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto Slab", serif;
+}
+.container h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 800px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container p:nth-child(2)::first-letter,
+  .container p:nth-child(3)::first-letter,
+  .container p:nth-child(4)::first-letter,
+  .container p:nth-child(5)::first-letter,
+  .container p:nth-child(6)::first-letter {
+    font-size: 2rem;
+  }
+  .container p:nth-child(3),
+  .container p:nth-child(4),
+  .container p:nth-child(5),
+  .container p:nth-child(6) {
+    font-size: 1rem;
+  }
+  .container h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  .container p:nth-child(2)::first-letter,
+  .container p:nth-child(3)::first-letter,
+  .container p:nth-child(4)::first-letter,
+  .container p:nth-child(5)::first-letter,
+  .container p:nth-child(6)::first-letter {
+    font-size: 1.3rem;
+  }
+  .container p:nth-child(3),
+  .container p:nth-child(4),
+  .container p:nth-child(5),
+  .container p:nth-child(6) {
+    font-size: 0.9rem;
+  }
+  .container h2 {
+    font-size: 1rem;
+  }
+}
